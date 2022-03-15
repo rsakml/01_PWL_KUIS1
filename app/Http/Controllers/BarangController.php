@@ -9,7 +9,7 @@ class BarangController extends Controller
 {
     public function barang(){
         
-        $barang = Barang::all();
+        $barang = Barang::paginate(3);
         return view('barang')
                 ->with('title','Data Barang')
                 ->with('barang',$barang);

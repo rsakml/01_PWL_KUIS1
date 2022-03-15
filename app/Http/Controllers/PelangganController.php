@@ -9,7 +9,7 @@ class PelangganController extends Controller
 {
     public function pelanggan(){
         
-        $pelanggan = Pelanggan::all();
+        $pelanggan = Pelanggan::paginate(5);
         return view('pelanggan')
                 ->with('title','Data Pelanggan')
                 ->with('pelanggan',$pelanggan);
